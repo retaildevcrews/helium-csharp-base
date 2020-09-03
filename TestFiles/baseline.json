@@ -1,0 +1,6 @@
+[
+  {"path":"/version","perfTarget":{"category":"Static"},"validation":{"jsonObject":[{"field":"apiVersion","value":"1.0"},{"field":"appVersion"}]}},
+  {"path":"/api/genres","perfTarget":{"category":"PagedRead"},"validation":{"jsonArray":{"count": 2}}},
+  {"path":"/healthz","perfTarget":{"category":"Healthz"},"validation":{"contentType":"text/plain","notContains":["fail"]}},
+  {"path":"/healthz/ietf","perfTarget":{"category":"Healthz"},"validation":{"contentType":"application/health+json","jsonObject":[{"field":"status","validation":{"notContains":["fail"]}},{"field":"serviceId"},{"field":"description"},{"field":"instance"},{"field":"version"},{"field":"checks"}]}},
+]

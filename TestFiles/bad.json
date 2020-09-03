@@ -1,0 +1,4 @@
+[
+  {"Path":"/api/foo", "PerfTarget":{"Category": "Static"},"Validation":{"StatusCode":404}},
+  {"Path":"/api/bar", "PerfTarget":{"Category": "Static"},"Validation":{"StatusCode":404}},
+]

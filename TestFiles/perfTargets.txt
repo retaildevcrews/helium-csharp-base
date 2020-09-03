@@ -1,0 +1,6 @@
+{
+  "DirectRead":{"Category":"DirectRead","Quartiles":[40,80,120]},
+  "Healthz":{"Category":"Healthz","Quartiles":[400,800,1600]},
+  "PagedRead":{"Category":"PagedRead","Quartiles":[40,80,160]},
+  "Static":{"Category":"Static","Quartiles":[40,80,160]}
+}
