@@ -1,19 +1,12 @@
-# Managed Identity and Key Vault with ASP.NET Core
+# Application Title
 
-> Build an ASP.NET Core Web API using Managed Identity, Key Vault, and Cosmos DB that is designed to be deployed to Azure App Service or Azure Kubernetes Service (AKS) as a Docker container
+> Application Description
 
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
+
+<!--- TODO update this link --->
+
 ![Docker Image Build](https://github.com/retaildevcrews/helium-csharp/workflows/Docker%20Image%20Build/badge.svg)
-
-This is an ASP.NET Core Web API reference application designed to "fork and code" with the following features:
-
-- Securely build, deploy and run an Azure App Service (Web App for Containers) application
-- Securely build, deploy and run an Azure Kubernetes Service (AKS) application
-- Use Managed Identity to securely access resources
-- Securely store secrets in Key Vault
-- Securely build and deploy the Docker container to Azure Container Registry (ACR) or Docker Hub
-- Connect to and query Cosmos DB
-- Automatically send telemetry and logs to Azure Monitor
 
 > Visual Studio Codespaces is the easiest way to evaluate helium as all of the prerequisites are automatically installed
 >
@@ -30,8 +23,7 @@ This is an ASP.NET Core Web API reference application designed to "fork and code
 
 ## Setup
 
-- Initial setup instructions are in the [Helium readme](https://github.com/retaildevcrews/helium)
-  - Please complete the setup steps and then continue below
+- Initial setup instructions are here
 
 ### Validate az CLI works
 
@@ -90,10 +82,10 @@ Open a new bash shell
 # test the application
 
 # test using httpie (installed automatically in Codespaces)
-http localhost:4120/version
+http localhost:8080/version
 
 # test using curl
-curl localhost:4120/version
+curl localhost:8080/version
 
 ```
 
@@ -115,7 +107,7 @@ dotnet tool install -g webvalidate
 # validation tests are located in the TestFiles directory
 
 pushd TestFiles
-webv -s localhost:4120 -f baseline.json
+webv -s localhost:8080 -f baseline.json
 
 # there may be a validation error on the /healthz/ietf test
 #   json: status: warn : Expected: pass
@@ -123,8 +115,6 @@ webv -s localhost:4120 -f baseline.json
 # and will occasionally occur due to network latency
 
 # bad.json tests error conditions that return 4xx codes
-
-# benchmark.json is a 300 request test that covers the entire API
 
 popd
 
