@@ -48,16 +48,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Use Node.js
-      uses: actions/setup-node@v1
-      with:
-        node-version: 12.x
-    
-    - name: Run Markdownlint
-      run: |
-        npm i
-        npm run lint    - name: Set conditions
-
     - name: Set conditions
       run: |
         # check that all Azure secrets are set
